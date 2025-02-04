@@ -50,12 +50,11 @@ def optimalformat():
     global optiNzRb1, optiNzRb2, optimalBreite, optimalHohe
 
     optiNzRb1 = (RbBreite // optimalBreite) * (RbHohe // optimalHohe)
-    optiNzRb1 = (RbBreite // optimalHohe) * (RbHohe // optimalBreite)
+    optiNzRb2 = (RbBreite // optimalHohe) * (RbHohe // optimalBreite)
 
-    # Sind mehr als 1 optimal Druckbogen möglich aus einem Rohbogen?
-    if optiNzRb1 > 1
-        print(f"ℹ️ Es können {optiNzRb1} Druckbogen im Format {optimalBreite} x {optimalHohe} mm aus dem Rohbogen geschnitten werden.")
-    else if optiNzRb2 > 1
-        print(f"ℹ️ Es können {optiNzRb2} Druckbogen im Format {optimalBreite} x {optimalHohe} mm aus dem Rohbogen geschnitten werden.")
-    else
-        print(f"ℹ️ Das Druckformat {optimalBreite} x {optimalHohe} mm wird nicht empfohlen, da nur ein Druckbogen aus einem Rohbogen geschnitten werden kann.")
+    optiNzMax = max(optiNzRb1, optiNzRb2)
+
+    if optiNzMax > 1:
+        print(f"ℹ️ Es können {optiNzMax} Druckbogen {optimalBreite} x {optimalHohe} mm aus dem Rohbogen geschnitten werden.")
+    else:
+        print(f"ℹ️ Das Druckformat wird nicht empfohlen, da nur ein Druckbogen aus einem Rohbogen geschnitten werden kann.")
