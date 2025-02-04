@@ -28,12 +28,12 @@ BaseImposition ist eine modulare Druckoptimierungs-Software mit einer GUI, die a
 
 ## 🛠 Installation
 
-# Stelle sicher, dass Python (>=3.8) installiert ist.
+```Stelle sicher, dass Python (>=3.8) installiert ist.
 # Installiere die benötigten Abhängigkeiten
 pip install -r requirements.txt
 
 # Starte die Anwendung
-python main.py
+python main.py```
 
 ## 📖 Nutzung
 
